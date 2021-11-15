@@ -11,7 +11,6 @@ $ErrorActionPreference = "Stop"
 # Auth
 $TenantId = $Env:AZURETENANTID
 $ClientId = $Env:AZURECLIENTID
-$ClientSecret = $Env:AZUREPASSWORD | ConvertTo-SecureString $Env:AZUREPASSWORD -AsPlainText -Force
 
 # Location Details
 $CreationScope = $Env:INPUT_SCOPE
