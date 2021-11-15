@@ -45,7 +45,7 @@ if ($CreationScope -eq 'Subscription') {
 }
 
 # Connect to Azure
-$creds = New-Object System.Management.Automation.PSCredential ($ClientId, $ClientSecret)
+$creds = New-Object System.Management.Automation.PSCredential ($ClientId)
 Connect-AzAccount -ServicePrincipal -Tenant $TenantId -Credential $creds -WarningAction silentlyContinue
 
 # Create Blueprint
