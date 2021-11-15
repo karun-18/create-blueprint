@@ -9,19 +9,19 @@
 $ErrorActionPreference = "Stop"
 
 # Auth
-$TenantId = $Env:AZURETENANTID
-$ClientId = $Env:AZURECLIENTID
-$ClientSecret = ConvertTo-SecureString $Env:AZUREPASSWORD -AsPlainText -Force
+$TenantId = $env:AZURETENANTID
+$ClientId = $env:AZURECLIENTID
+$ClientSecret = ConvertTo-SecureString $env:AZUREPASSWORD -AsPlainText -Force
 
 # Location Details
-$CreationScope = $Env:INPUT_SCOPE
-$BlueprintManagementGroup = $Env:INPUT_AZUREMANAGEMENTGROUPNAME
-$BlueprintSubscriptionID = $Env:INPUT_AZURESUBSCRIPTIONID
+$CreationScope = $env:INPUT_SCOPE
+$BlueprintManagementGroup = $env:INPUT_AZUREMANAGEMENTGROUPNAME
+$BlueprintSubscriptionID = $env:INPUT_AZURESUBSCRIPTIONID
 
-$BlueprintName = $Env:INPUT_BLUEPRINTNAME
-$BlueprintPath = $Env:INPUT_BLUEPRINTPATH
-$PublishBlueprint = $Env:INPUT_PUBLISHBLUEPRINT
-$BlueprintVersion = $Env:INPUT_VERSION
+$BlueprintName = $env:INPUT_BLUEPRINTNAME
+$BlueprintPath = $env:INPUT_BLUEPRINTPATH
+$PublishBlueprint = $env:INPUT_PUBLISHBLUEPRINT
+$BlueprintVersion = $env:INPUT_VERSION
 
 # Install Azure PowerShell modules
 if (Get-Module -ListAvailable -Name Az.Accounts) {
