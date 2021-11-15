@@ -11,8 +11,7 @@ $ErrorActionPreference = "Stop"
 # Auth
 $TenantId = $Env:AZURETENANTID
 $ClientId = $Env:AZURECLIENTID
-$ClientSecret = $Env:AZUREPASSWORD | -AsSecureString
-$ClientSecretString = ConvertFrom-SecureString $ClientSecret
+$ClientSecret = ConvertTo-SecureString $Env:AZUREPASSWORD -AsPlainText -Force
 
 # Location Details
 $CreationScope = $Env:INPUT_SCOPE
@@ -47,7 +46,7 @@ if ($CreationScope -eq 'Subscription') {
 }
 
 # Connect to Azure
-$creds = New-Object System.Management.Automation.PSCredential ($ClientId, $ClientSecretString)
+$creds = New-Object System.Management.Automation.PSCredential ($ClientId, $ClientSecret)
 Connect-AzAccount -ServicePrincipal -Tenant $TenantId -Credential $creds -WarningAction silentlyContinue
 
 # Create Blueprint
