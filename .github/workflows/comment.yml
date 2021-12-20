@@ -17,3 +17,9 @@ jobs:
         with:
           message: '- [ ] has documentation been updated?'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    
+  
+      - name: Check Issue for Incomplete Checklist
+        uses: adamzolyak/checklist-checker-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
