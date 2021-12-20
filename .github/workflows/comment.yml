@@ -16,3 +16,4 @@ jobs:
         uses: allthatjazzleo/actions-pull-request-add-comment@master
         with:
           message: 'yoyo🤙🏻'
+          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
