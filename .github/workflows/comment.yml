@@ -15,5 +15,5 @@ jobs:
       - name: Comment PR
         uses: allthatjazzleo/actions-pull-request-add-comment@master
         with:
-          message: 'yoyo🤙🏻'
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
+          message: '- [ ] has documentation been updated?'
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
