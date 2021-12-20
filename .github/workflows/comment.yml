@@ -18,7 +18,11 @@ jobs:
           message: '- [ ] has documentation been updated?'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     
-  
+  Incomplete_checklist:
+    needs: example_comment_pr
+    runs-on: ubuntu-latest
+    name: Checklist checker
+    steps:
       - name: Check Issue for Incomplete Checklist
         uses: adamzolyak/checklist-checker-action@master
         env:
