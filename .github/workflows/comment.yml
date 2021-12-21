@@ -27,5 +27,3 @@ jobs:
         uses: mheap/require-checklist-action@v1
         with: 
           requireChecklist: true
-        env:
-          GITHUB_TOKEN = ${{ secrets.GITHUB_TOKEN }}
