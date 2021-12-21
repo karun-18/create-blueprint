@@ -16,7 +16,7 @@ jobs:
         uses: allthatjazzleo/actions-pull-request-add-comment@master
         with:
           message: | 
-            '- [ ] please ensure that all necessary documentation has been updated on the
+            - [ ] Please ensure that all necessary documentation has been updated on the
             documentation-data-ai repository. Once completed, please check the box and paste a link to the
-            changes made in the documentation prior to the pull request being approved.'
+            changes made in the documentation prior to the pull request being approved.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
