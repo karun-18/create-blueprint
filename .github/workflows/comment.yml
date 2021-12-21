@@ -26,4 +26,4 @@ jobs:
       - name: Check Issue for Incomplete Checklist
         uses: mheap/require-checklist-action@v1
         with: 
-          requireChecklist: true
+          requireChecklist: false
