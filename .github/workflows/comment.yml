@@ -24,6 +24,8 @@ jobs:
     name: Checklist checker
     steps:
       - name: Check Issue for Incomplete Checklist
-        uses: adamzolyak/checklist-checker-action@master
+        uses: mheap/require-checklist-action@v1
+        with: 
+          requireChecklist: true
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN = ${{ secrets.GITHUB_TOKEN }}
